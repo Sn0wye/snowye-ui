@@ -6,7 +6,8 @@ export default {
   title: 'Form/Button',
   component: Button,
   args: {
-    children: 'LABEL'
+    children: 'LABEL',
+    size: 'md'
   },
   argTypes: {
     size: {
