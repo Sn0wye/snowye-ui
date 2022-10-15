@@ -15,19 +15,21 @@
     "@storybook/testing-library": "^0.0.13",
     "@vitejs/plugin-react": "^2.1.0",
     "babel-loader": "^8.2.5",
+    "eslint": "^8.25.0",
     "vite": "^3.1.8"
   },
   "dependencies": {
     "@sn0wye-ui/eslint-config": "*",
-    "@sn0wye-ui/ts-config": "*",
     "@sn0wye-ui/react": "*",
     "@sn0wye-ui/tokens": "*",
+    "@sn0wye-ui/ts-config": "*",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "build": "build-storybook",
+    "lint": "eslint --ext .ts,.tsx --fix"
   }
 }
