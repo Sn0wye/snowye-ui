@@ -1499,10 +1499,10 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@sn0wye/eslint-config@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@sn0wye/eslint-config/-/eslint-config-1.8.0.tgz#842e073a4fb9f6b737975741992e32e0d2266b84"
-  integrity sha512-IW+chUvF5pjyrzXphqKDT0rOtnTgAZPKUymH5o8r7AVuhcBFv+Zkrk3qb5a3+e63VEtTj3QuD/A7YJbtZKA2jQ==
+"@sn0wye/eslint-config@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@sn0wye/eslint-config/-/eslint-config-1.8.1.tgz#7dfe7e99e195be8619412f59a68b9e515bda4724"
+  integrity sha512-8uv3mfx+8GC1fYdxEVQvVyA3HvE564A2M2WUjG9flDZMpcwWSBXPPjlakmune5DCoh+XIHp0E3bn/iN0JGoxYA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.25.0"
     "@typescript-eslint/parser" "^5.25.0"
@@ -1513,7 +1513,7 @@
     eslint-plugin-import-helpers "^1.2.1"
     eslint-plugin-jsx-a11y "^6.5.1"
     eslint-plugin-n "^15.2.0"
-    eslint-plugin-prettier "^4.0.0"
+    eslint-plugin-prettier "^4.2.1"
     eslint-plugin-promise "^6.0.0"
     eslint-plugin-react "^7.30.0"
     eslint-plugin-react-hooks "^4.5.0"
@@ -5290,7 +5290,7 @@ eslint-plugin-n@^15.2.0:
     resolve "^1.22.1"
     semver "^7.3.7"
 
-eslint-plugin-prettier@^4.0.0:
+eslint-plugin-prettier@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-4.2.1.tgz#651cbb88b1dab98bfd42f017a12fa6b2d993f94b"
   integrity sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==
