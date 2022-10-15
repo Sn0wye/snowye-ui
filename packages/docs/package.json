@@ -23,6 +23,7 @@
     "@sn0wye-ui/react": "*",
     "@sn0wye-ui/tokens": "*",
     "@sn0wye-ui/ts-config": "*",
+    "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
