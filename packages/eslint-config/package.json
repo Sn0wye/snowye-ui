@@ -1,10 +1,11 @@
 {
+  "version": "1.0.0",
   "name": "@sn0wye-ui/eslint-config",
   "license": "MIT",
   "private": true,
   "main": "index.js",
   "devDependencies": {
-    "@sn0wye/eslint-config": "^1.5.0",
+    "@sn0wye/eslint-config": "^1.8.0",
     "eslint": "^8.24.0"
   }
 }
