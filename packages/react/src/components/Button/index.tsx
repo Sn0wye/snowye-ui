@@ -10,7 +10,7 @@ export const Button = styled('button', {
   fontFamily: '$default',
   textAlign: 'center',
   minWidth: 120,
-  boxShadow: 'border-box',
+  boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
