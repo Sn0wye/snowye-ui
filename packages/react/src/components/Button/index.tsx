@@ -9,14 +9,12 @@ export const Button = styled('button', {
   fontWeight: '$bold',
   fontFamily: '$default',
   textAlign: 'center',
-  minWidth: 120,
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   gap: '$2',
   cursor: 'pointer',
-  padding: '0 $4',
   transition: 'all 0.2s ease-in-out',
 
   svg: {
@@ -85,10 +83,17 @@ export const Button = styled('button', {
 
     size: {
       sm: {
-        height: 38
+        height: '$8',
+        padding: '0 $4',
+        fontSize: '$xs'
       },
       md: {
-        height: 46
+        height: '$10',
+        padding: '0 $6'
+      },
+      lg: {
+        height: '$12',
+        padding: '0 $8'
       }
     },
 
