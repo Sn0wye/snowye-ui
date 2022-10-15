@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "devDependencies": {
-    "@sn0wye/eslint-config": "^1.8.0",
+    "@sn0wye/eslint-config": "^1.8.1",
     "eslint": "^8.24.0"
   }
 }
