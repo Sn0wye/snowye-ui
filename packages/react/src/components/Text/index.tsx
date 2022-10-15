@@ -1,5 +1,6 @@
-import { ComponentProps, ElementType } from "react";
-import { styled } from "../../styles";
+import { ComponentProps, ElementType } from 'react';
+
+import { styled } from '../../styles';
 
 export const Text = styled('p', {
   fontFamily: '$default',
@@ -48,13 +49,13 @@ export const Text = styled('p', {
       '9xl': {
         fontSize: '$9xl'
       }
-    },
+    }
   },
   defaultVariants: {
-    size: 'md',
+    size: 'md'
   }
-})
+});
 
 export interface TextProps extends ComponentProps<typeof Text> {
   as?: ElementType;
-};
+}
