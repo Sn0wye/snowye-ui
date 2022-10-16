@@ -23,7 +23,8 @@ export const Button = styled('button', {
   },
 
   '&:disabled': {
-    cursor: 'not-allowed'
+    cursor: 'not-allowed',
+    opacity: '50%'
   },
 
   variants: {
@@ -34,10 +35,6 @@ export const Button = styled('button', {
 
         '&:not(:disabled):hover': {
           background: '$purple300'
-        },
-
-        '&:disabled': {
-          background: '$gray200'
         }
       },
       secondary: {
@@ -47,12 +44,6 @@ export const Button = styled('button', {
         '&:not(:disabled):hover': {
           background: '$purple500',
           color: '$white'
-        },
-
-        '&:disabled': {
-          background: '$gray200',
-          color: '$gray200',
-          borderColor: '$gray200'
         }
       },
       tertiary: {
@@ -61,10 +52,6 @@ export const Button = styled('button', {
         '&:not(:disabled):hover': {
           color: '$white',
           background: '$gray700'
-        },
-
-        '&:disabled': {
-          color: '$gray600'
         }
       },
       danger: {
@@ -73,10 +60,6 @@ export const Button = styled('button', {
 
         '&:not(:disabled):hover': {
           background: '$gray600'
-        },
-
-        '&:disabled': {
-          opacity: '50%'
         }
       }
     },
