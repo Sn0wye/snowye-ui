@@ -61,11 +61,6 @@ export const Danger: StoryObj<ButtonProps> = {
 
 export const WithIcon: StoryObj<ButtonProps> = {
   args: {
-    children: (
-      <>
-        Next Step
-        <ArrowRight weight='bold' />
-      </>
-    )
+    children: ['Next Step', <ArrowRight key='a' weight='bold' />]
   }
 };
