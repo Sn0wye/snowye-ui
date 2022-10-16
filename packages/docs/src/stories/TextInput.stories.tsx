@@ -13,10 +13,6 @@ export default {
       type: 'boolean',
       defaultValue: false
     },
-    invalid: {
-      type: 'boolean',
-      defaultValue: false
-    },
     error: {
       type: 'boolean',
       defaultValue: false
