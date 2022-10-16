@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@sn0wye-ui/react';
+import { Box, Button, ButtonProps } from '@sn0wye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ArrowRight } from 'phosphor-react';
 
@@ -24,7 +24,19 @@ export default {
       type: 'boolean',
       defaultValue: false
     }
-  }
+  },
+  decorators: [
+    Story => (
+      <Box
+        css={{
+          display: 'grid',
+          placeItems: 'center'
+        }}
+      >
+        {Story()}
+      </Box>
+    )
+  ]
 } as Meta<ButtonProps>;
 
 export const Primary: StoryObj<ButtonProps> = {};
