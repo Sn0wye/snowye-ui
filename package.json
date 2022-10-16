@@ -5,8 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "dev": "turbo dev --parallel",
+    "build": "turbo build",
+    "lint": "turbo lint"
   },
   "devDependencies": {
     "turbo": "^1.5.6"
