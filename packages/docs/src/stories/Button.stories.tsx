@@ -7,9 +7,16 @@ export default {
   component: Button,
   args: {
     children: 'LABEL',
+    variant: 'primary',
     size: 'md'
   },
   argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'tertiary', 'danger'],
+      control: {
+        type: 'inline-radio'
+      }
+    },
     size: {
       options: ['sm', 'md', 'lg'],
       control: {
