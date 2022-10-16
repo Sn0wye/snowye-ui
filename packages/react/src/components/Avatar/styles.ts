@@ -20,8 +20,9 @@ export const AvatarImage = styled(Avatar.Image, {
 export const AvatarFallback = styled(Avatar.Fallback, {
   width: '100%',
   height: '100%',
-  display: 'gap',
-  placeItems: 'center',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   background: '$gray600',
   color: '$gray800',
 
