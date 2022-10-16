@@ -1,6 +1,6 @@
 import { TextInput, TextInputRootProps } from '@sn0wye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Envelope, Lock, User } from 'phosphor-react';
+import { Envelope, Lock } from 'phosphor-react';
 
 export default {
   title: 'Form/TextInput',
@@ -16,11 +16,6 @@ export default {
     invalid: {
       type: 'boolean',
       defaultValue: false
-    },
-    leftIcon: {
-      type: 'symbol',
-      options: [<Lock key='q' />, <User key='p' />],
-      control: 'select'
     },
     error: {
       type: 'boolean',
