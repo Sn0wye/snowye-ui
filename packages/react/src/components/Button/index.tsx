@@ -17,6 +17,7 @@ export const Button = ({
   const loadingColor = variant === 'danger' ? '$red500' : '$white';
   const content = loading ? (
     <Loading
+      weight='bold'
       css={{
         color: loadingColor
       }}
