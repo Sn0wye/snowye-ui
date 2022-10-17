@@ -30,6 +30,10 @@ export default {
     disabled: {
       type: 'boolean',
       defaultValue: false
+    },
+    loading: {
+      type: 'boolean',
+      defaultValue: false
     }
   }
 } as Meta<ButtonProps>;
