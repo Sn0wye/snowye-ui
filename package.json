@@ -7,10 +7,14 @@
   "scripts": {
     "dev": "turbo dev --parallel",
     "build": "turbo build",
-    "build:docs": "turbo build --filter=centaurus",
-    "lint": "turbo lint"
+    "build:docs": "turbo build --filter=snowye",
+    "lint": "turbo lint",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build --filter=!docs && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.25.0",
     "turbo": "^1.5.6"
   }
 }
