@@ -7,11 +7,11 @@
   "scripts": {
     "dev": "turbo dev --parallel",
     "build": "turbo build",
-    "build:docs": "turbo build --filter=snowye",
+    "build:docs": "turbo build --filter=docs",
     "lint": "turbo lint",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build --filter=!docs && changeset publish"
+    "release": "yarn turbo build --filter=@snowye-ui/react --filter=@snowye-ui/tokens && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.0",
