@@ -33,6 +33,6 @@
     "dev": "start-storybook -p 6006",
     "build": "build-storybook",
     "serve": "serve storybook-static",
-    "lint": "eslint --ext .ts,.tsx --fix"
+    "lint": "eslint src --ext .ts,.tsx --fix"
   }
 }
