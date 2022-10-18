@@ -1,4 +1,4 @@
-import { Heading, HeadingProps } from '@sn0wye-ui/react';
+import { Heading, HeadingProps } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 export default {

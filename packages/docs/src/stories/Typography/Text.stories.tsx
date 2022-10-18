@@ -1,4 +1,4 @@
-import { Text, TextProps } from '@sn0wye-ui/react';
+import { Text, TextProps } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 export default {

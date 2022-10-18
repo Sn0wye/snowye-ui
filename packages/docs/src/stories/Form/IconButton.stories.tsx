@@ -1,4 +1,4 @@
-import { IconButton, IconButtonProps } from '@sn0wye-ui/react';
+import { IconButton, IconButtonProps } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Plus } from 'phosphor-react';
 

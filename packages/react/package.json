@@ -1,5 +1,5 @@
 {
-  "name": "@sn0wye-ui/react",
+  "name": "@snowye-ui/react",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -14,9 +14,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@sn0wye-ui/eslint-config": "*",
-    "@sn0wye-ui/tokens": "*",
-    "@sn0wye-ui/ts-config": "*",
+    "@snowye-ui/eslint-config": "*",
+    "@snowye-ui/tokens": "*",
+    "@snowye-ui/ts-config": "*",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "eslint": "^8.25.0",

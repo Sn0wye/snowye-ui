@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "@sn0wye-ui/eslint-config",
+  "name": "@snowye-ui/eslint-config",
   "license": "MIT",
   "private": true,
   "main": "index.js",

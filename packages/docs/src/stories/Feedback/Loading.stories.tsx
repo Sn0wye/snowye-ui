@@ -1,4 +1,4 @@
-import { Box, Loading, LoadingProps } from '@sn0wye-ui/react';
+import { Box, Loading, LoadingProps } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 export default {

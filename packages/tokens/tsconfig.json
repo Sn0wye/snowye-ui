@@ -1,4 +1,4 @@
 {
-  "extends": "@sn0wye-ui/ts-config/base.json",
+  "extends": "@snowye-ui/ts-config/base.json",
   "include": ["src"],
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@sn0wye-ui/centaurus",
+  "name": "@snowye-ui/docs",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -20,10 +20,10 @@
     "vite": "^3.1.8"
   },
   "dependencies": {
-    "@sn0wye-ui/eslint-config": "*",
-    "@sn0wye-ui/react": "*",
-    "@sn0wye-ui/tokens": "*",
-    "@sn0wye-ui/ts-config": "*",
+    "@snowye-ui/eslint-config": "*",
+    "@snowye-ui/react": "*",
+    "@snowye-ui/tokens": "*",
+    "@snowye-ui/ts-config": "*",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react": "^18.2.0",

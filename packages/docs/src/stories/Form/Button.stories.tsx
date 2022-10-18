@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@sn0wye-ui/react';
+import { Button, ButtonProps } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ArrowRight } from 'phosphor-react';
 

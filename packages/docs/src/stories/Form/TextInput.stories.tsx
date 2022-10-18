@@ -1,4 +1,4 @@
-import { TextInput, TextInputRootProps } from '@sn0wye-ui/react';
+import { TextInput, TextInputRootProps } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Envelope, Lock } from 'phosphor-react';
 

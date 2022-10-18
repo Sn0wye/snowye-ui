@@ -1,4 +1,4 @@
-import { colors } from '@sn0wye-ui/tokens';
+import { colors } from '@snowye-ui/tokens';
 import { getContrast } from 'polished';
 
 export const ColorsGrid = () => {

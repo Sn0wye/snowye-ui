@@ -6,7 +6,7 @@ import {
   lineHeights,
   radii,
   space
-} from '@sn0wye-ui/tokens';
+} from '@snowye-ui/tokens';
 import { createStitches, defaultThemeMap } from '@stitches/react';
 
 export const {
