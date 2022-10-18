@@ -58,6 +58,24 @@ export const Danger: StoryObj<ButtonProps> = {
   }
 };
 
+export const Disabled: StoryObj<ButtonProps> = {
+  args: {
+    disabled: true
+  }
+};
+
+export const Full: StoryObj<ButtonProps> = {
+  args: {
+    full: true
+  }
+};
+
+export const Loading: StoryObj<ButtonProps> = {
+  args: {
+    loading: true
+  }
+};
+
 export const WithIcon: StoryObj<ButtonProps> = {
   args: {
     children: ['Next Step', <ArrowRight key='a' weight='bold' />]
