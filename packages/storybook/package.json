@@ -1,5 +1,5 @@
 {
-  "name": "@snowye-ui/docs",
+  "name": "@snowye-ui/storybook",
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
