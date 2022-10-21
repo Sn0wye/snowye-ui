@@ -2,10 +2,12 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "docs"
   ],
   "scripts": {
     "dev": "turbo dev --parallel",
+    "dev:docs": "turbo dev --filter=docs",
     "build": "turbo build",
     "build:docs": "turbo build --filter=docs",
     "lint": "turbo lint",
