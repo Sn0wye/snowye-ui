@@ -30,3 +30,5 @@ export const Tooltip = ({ children, content, ...props }: TooltipProps) => {
     </Provider>
   );
 };
+
+Tooltip.displayName = 'Tooltip';
