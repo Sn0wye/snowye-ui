@@ -9,3 +9,4 @@ export * from './components/MultiStep';
 export * from './components/Text';
 export * from './components/TextArea';
 export * from './components/TextInput';
+export * from './components/Tooltip';
