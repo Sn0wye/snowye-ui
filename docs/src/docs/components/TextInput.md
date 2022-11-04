@@ -6,6 +6,9 @@ A component to get user input inside a text field.
 <Input placeholder='Type some text...' />
 ```
 
+## Example
+<TextInput />
+
 ## API Reference
 | **Prop**   | **Type**  | **Default** |
 |------------|-----------|-------------|
