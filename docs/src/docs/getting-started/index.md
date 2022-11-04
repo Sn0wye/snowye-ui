@@ -8,17 +8,17 @@ A quick tutorial on how to get up and running with Snowye UI
 Install the Snowye UI from your command line
 
 #### npm
-```bash
+```sh
 npm install @snowye-ui/react
 ```
 
 #### yarn
-```bash
+```sh
 yarn add @snowye-ui/react
 ```
 
 #### pnpm
-```bash
+```sh
 pnpm i @snowye-ui/react
 ```
 
@@ -27,11 +27,12 @@ pnpm i @snowye-ui/react
 ```tsx
 import { Button } from '@snowye-ui/react'
 const Page = () => {
-  return (
-    <Button />
-  );
+  return <Button>I'm a button!</Button>;
 };
 ```
+
+### Result
+<Button />
 
 ## Props
 The props will be shown as the example that follows
