@@ -5,6 +5,7 @@ export * from './components/Checkbox';
 export * from './components/Heading';
 export * from './components/IconButton';
 export * from './components/Loading';
+export * from './components/Dialog';
 export * from './components/MultiStep';
 export * from './components/Text';
 export * from './components/TextArea';
