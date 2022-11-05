@@ -81,3 +81,9 @@ export const WithIcon: StoryObj<ButtonProps> = {
     children: ['Next Step', <ArrowRight key='a' weight='bold' />]
   }
 };
+
+export const AsAnchor: StoryObj<ButtonProps> = {
+  args: {
+    as: 'a'
+  }
+};

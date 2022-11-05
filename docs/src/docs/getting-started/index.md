@@ -8,17 +8,17 @@ A quick tutorial on how to get up and running with Snowye UI
 Install the Snowye UI from your command line
 
 #### npm
-```bash
+```sh
 npm install @snowye-ui/react
 ```
 
 #### yarn
-```bash
+```sh
 yarn add @snowye-ui/react
 ```
 
 #### pnpm
-```bash
+```sh
 pnpm i @snowye-ui/react
 ```
 
@@ -27,15 +27,16 @@ pnpm i @snowye-ui/react
 ```tsx
 import { Button } from '@snowye-ui/react'
 const Page = () => {
-  return (
-    <Button />
-  );
+  return <Button>I'm a button!</Button>;
 };
 ```
 
+### Result
+<Button />
+
 ## Props
-The props will be shown as the example that follows
-Notice that in this example, the interface is extending ComponentProps of ButtonContainer, which is a button, and can receive all props that a radix-ui button can.
+The props will be shown as the example that follows.
+Notice that in this example, the interface is extending ComponentProps of ButtonContainer, which is a radix-ui styled button, which can receive all props that a normal HTML button can, but can also receive all radix-ui props like `as` and `css`.
 
 ```tsx
 interface ButtonProps extends ComponentProps<typeof ButtonContainer> {

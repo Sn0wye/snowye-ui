@@ -46,7 +46,7 @@ export const TextInputContainer = styled('div', {
   }
 });
 
-export const Input = styled('input', {
+export const StyledInput = styled('input', {
   fontFamily: '$default',
   fontSize: '$md',
   color: '$white',
@@ -68,18 +68,18 @@ export const Input = styled('input', {
   }
 });
 
-export const Prefix = styled('span', {
+export const StyledPrefix = styled('span', {
   fontFamily: '$default',
   fontSize: '$md',
   color: '$gray400',
   fontWeight: '$regular'
 });
 
-export const LeftIcon = styled(Slot, {
+export const StyledLeftIcon = styled(Slot, {
   marginRight: '$4'
 });
 
-export const ToggleVisibilityIcon = styled(Slot, {
+export const StyledRightIcon = styled(Slot, {
   marginLeft: '$4',
   cursor: 'pointer'
 });

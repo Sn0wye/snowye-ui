@@ -1,15 +1,43 @@
-# Text Input
+# TextInput
 A component to get user input inside a text field.
 
-## Usage
+## Anatomy
+
+Mount all pieces together and create your input
+
 ```tsx
-<Input placeholder='Type some text...' />
+import { TextInput } from '@snowye-ui/react'
+
+<TextInput.Root>
+  <TextInput.LeftIcon>
+    // Your icon
+  </TextInput.LeftIcon>,
+  <TextInput.Input placeholder='Type some text...' />
+  <TextInput.RightIcon
+    activeIcon={/* Icon when text is visible */}
+    inactiveIcon={/* Icon when text not visible */}
+  />
+</TextInput.Root>
 ```
 
+## Example
+<TextInput />
+
 ## API Reference
-| **Prop**   | **Type**  | **Default** |
-|------------|-----------|-------------|
-| `children` | ReactNode |             |
-| `leftIcon` | ReactNode |             |
-| `prefix`   | string    |             |
-| `error`    | boolean   | false       |
+
+### Root
+Contains all parts of the TextInput.
+
+| **Prop**      | **Type**  | **Default** |
+|---------------|-----------|-------------|
+| `children`    | ReactNode |             |
+| `error`       | boolean   | false       |  
+| `disabled`    | boolean   | false       |  
+
+### RightIcon
+Contains all parts of the TextInput.
+
+| **Prop**        | **Type**  | **Default** |
+|-----------------|-----------|-------------|
+| `activeIcon`    | ReactNode |             |
+| `inactiveIcon`  | ReactNode |             |  
