@@ -35,8 +35,8 @@ const Page = () => {
 <Button />
 
 ## Props
-The props will be shown as the example that follows
-Notice that in this example, the interface is extending ComponentProps of ButtonContainer, which is a button, and can receive all props that a radix-ui button can.
+The props will be shown as the example that follows.
+Notice that in this example, the interface is extending ComponentProps of ButtonContainer, which is a radix-ui styled button, which can receive all props that a normal HTML button can, but can also receive all radix-ui props like `as` and `css`.
 
 ```tsx
 interface ButtonProps extends ComponentProps<typeof ButtonContainer> {
