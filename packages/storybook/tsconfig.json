@@ -1,4 +1,4 @@
 {
   "extends": "@snowye-ui/ts-config/react.json",
-  "include": ["src"],
+  "include": ["src", "../react/src/components"],
 }
