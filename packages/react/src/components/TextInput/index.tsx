@@ -121,7 +121,8 @@ const TextInputRightIcon = ({
 }: TextInputRightIconProps) => {
   const { isTextVisible, toggleVisibility } = useContext(TextInputContext);
 
-  const icon = isTextVisible ? activeIcon : inactiveIcon;
+  // This makes no sense, but when the text is visible, the inactiveIcon is shown to hide the text
+  const icon = isTextVisible ? inactiveIcon : activeIcon;
 
   return <StyledRightIcon onClick={toggleVisibility}>{icon}</StyledRightIcon>;
 };
