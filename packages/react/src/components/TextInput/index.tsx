@@ -2,6 +2,7 @@ import {
   ComponentProps,
   createContext,
   Dispatch,
+  forwardRef,
   ReactNode,
   SetStateAction,
   useCallback,
@@ -91,20 +92,24 @@ TextInputPrefix.displayName = 'TextInput.Prefix';
 
 interface TextInputProps extends ComponentProps<typeof StyledInput> {}
 
-const TextInputInput = ({ type, ...props }: TextInputProps) => {
-  const { isTextVisible, setTextVisibility, disabled } =
-    useContext(TextInputContext);
+const TextInputInput = forwardRef<HTMLInputElement, TextInputProps>(
+  ({ type, ...props }, ref) => {
+    const { isTextVisible, setTextVisibility, disabled } =
+      useContext(TextInputContext);
 
-  useEffect(() => {
-    if (type === 'password') {
-      setTextVisibility(false);
-    }
-  }, [type, setTextVisibility]);
+    useEffect(() => {
+      if (type === 'password') {
+        setTextVisibility(false);
+      }
+    }, [type, setTextVisibility]);
 
-  const inputType = isTextVisible ? 'text' : 'password';
+    const inputType = isTextVisible ? 'text' : 'password';
 
-  return <StyledInput type={inputType} disabled={disabled} {...props} />;
-};
+    return (
+      <StyledInput type={inputType} disabled={disabled} ref={ref} {...props} />
+    );
+  }
+);
 
 TextInputInput.displayName = 'TextInput.Input';
 
