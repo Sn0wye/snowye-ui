@@ -1,6 +1,22 @@
 import { IconButton, IconButtonProps } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Plus } from 'phosphor-react';
+import { Plus, Trash, User } from 'phosphor-react';
+
+const iconArgType = {
+  options: ['noIcon', 'Plus', 'Plus', 'Trash'],
+  mapping: {
+    noIcon: null,
+    User: <User />,
+    Plus: <Plus />,
+    Trash: <Trash />
+  },
+  control: {
+    type: 'select',
+    labels: {
+      noIcon: 'No Icon'
+    }
+  }
+};
 
 export default {
   title: 'Form/IconButton',
@@ -30,7 +46,8 @@ export default {
     loading: {
       type: 'boolean',
       defaultValue: false
-    }
+    },
+    children: iconArgType
   }
 } as Meta<IconButtonProps>;
 
