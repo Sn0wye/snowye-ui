@@ -42,5 +42,8 @@ export const Loading = styled(CircleNotch, {
 });
 
 Loading.displayName = 'Loading';
+Loading.defaultProps = {
+  'aria-label': 'Loading...'
+};
 
 export interface LoadingProps extends ComponentProps<typeof Loading> {}
