@@ -13,6 +13,7 @@ const contentShow = keyframes({
 });
 
 export const StyledOverlay = styled(DialogPrimitive.Overlay, {
+  zIndex: 200,
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
   position: 'fixed',
   inset: 0,
@@ -24,6 +25,7 @@ export const StyledOverlay = styled(DialogPrimitive.Overlay, {
 });
 
 export const StyledContent = styled(DialogPrimitive.Content, {
+  zIndex: 300,
   fontFamily: '$default',
   backgroundColor: '$gray800',
   borderRadius: '$sm',
