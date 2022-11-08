@@ -1,3 +1,5 @@
+import { Slot } from '@radix-ui/react-slot';
+
 import { styled } from '../../styles';
 
 export const ButtonContainer = styled('button', {
@@ -88,4 +90,9 @@ export const ButtonContainer = styled('button', {
     variant: 'primary',
     size: 'md'
   }
+});
+
+export const StyledLeftIcon = styled(Slot, {});
+export const StyledRightIcon = styled(Slot, {
+  marginLeft: 'auto'
 });

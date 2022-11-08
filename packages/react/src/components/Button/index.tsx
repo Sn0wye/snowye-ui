@@ -1,35 +1,98 @@
-import { ComponentProps, ElementType } from 'react';
+import {
+  ComponentProps,
+  createContext,
+  Dispatch,
+  ElementType,
+  forwardRef,
+  ReactNode,
+  SetStateAction,
+  useContext,
+  useState
+} from 'react';
 
 import { Loading } from '../Loading';
-import { ButtonContainer } from './styles';
+import { ButtonContainer, StyledLeftIcon, StyledRightIcon } from './styles';
 
-export interface ButtonProps extends ComponentProps<typeof ButtonContainer> {
+interface ButtonContextType {
+  isHovered: boolean;
+  setIsHovered: Dispatch<SetStateAction<boolean>>;
+}
+
+const ButtonContext = createContext({} as ButtonContextType);
+
+interface ButtonProps extends ComponentProps<typeof ButtonContainer> {
   as?: ElementType;
   loading?: boolean;
 }
 
-export const Button = ({
-  children,
-  loading = false,
-  variant,
-  ...props
-}: ButtonProps) => {
-  const loadingColor = variant === 'danger' ? '$red500' : '$white';
-  const content = loading ? (
-    <Loading
-      weight='bold'
-      css={{
-        color: loadingColor
-      }}
-    />
-  ) : (
-    children
-  );
+const ButtonRoot = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, loading = false, variant, ...props }, ref) => {
+    const [isHovered, setIsHovered] = useState(false);
+    const content = loading ? <Loading weight='bold' /> : children;
+
+    return (
+      <ButtonContext.Provider
+        value={{
+          isHovered,
+          setIsHovered
+        }}
+      >
+        <ButtonContainer
+          ref={ref}
+          variant={variant}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          data-hover={isHovered}
+          {...props}
+        >
+          {content}
+        </ButtonContainer>
+      </ButtonContext.Provider>
+    );
+  }
+);
+
+ButtonRoot.displayName = 'Button';
+
+/* ----------------------------------------------------------------------------------------------- */
+
+interface ButtonLeftIconProps extends ComponentProps<typeof StyledLeftIcon> {
+  children?: ReactNode;
+}
+const ButtonLeftIcon = ({ children, ...props }: ButtonLeftIconProps) => {
+  const { isHovered } = useContext(ButtonContext);
+
   return (
-    <ButtonContainer variant={variant} {...props}>
-      {content}
-    </ButtonContainer>
+    <StyledLeftIcon data-hover={isHovered} {...props}>
+      {children}
+    </StyledLeftIcon>
   );
 };
 
-Button.displayName = 'Button';
+ButtonLeftIcon.displayName = 'Button.LeftIcon';
+
+/* ----------------------------------------------------------------------------------------------- */
+
+interface ButtonRightIconProps extends ComponentProps<typeof StyledRightIcon> {
+  children?: ReactNode;
+}
+const ButtonRightIcon = ({ children, ...props }: ButtonRightIconProps) => {
+  const { isHovered } = useContext(ButtonContext);
+
+  return (
+    <StyledRightIcon data-hover={isHovered} {...props}>
+      {children}
+    </StyledRightIcon>
+  );
+};
+
+ButtonRightIcon.displayName = 'Button.RightIcon';
+
+/* ----------------------------------------------------------------------------------------------- */
+
+export const Button = Object.assign(ButtonRoot, {
+  LeftIcon: ButtonLeftIcon,
+  RightIcon: ButtonRightIcon
+});
+
+export type { ButtonProps, ButtonLeftIconProps, ButtonRightIconProps };

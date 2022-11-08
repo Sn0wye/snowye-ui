@@ -1,5 +1,6 @@
+/* eslint-disable react/jsx-key */
 import { Button, ButtonProps } from '@snowye-ui/react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, Story, StoryObj } from '@storybook/react';
 import { ArrowRight } from 'phosphor-react';
 
 export default {
@@ -76,14 +77,23 @@ export const Loading: StoryObj<ButtonProps> = {
   }
 };
 
-export const WithIcon: StoryObj<ButtonProps> = {
-  args: {
-    children: ['Next Step', <ArrowRight key='a' weight='bold' />]
-  }
-};
+export const WithIcon: Story<ButtonProps> = () => (
+  <Button>
+    Next Step
+    <Button.RightIcon
+      css={{
+        transition: 'transform 0.3s ease',
 
-export const AsAnchor: StoryObj<ButtonProps> = {
-  args: {
-    as: 'a'
-  }
-};
+        '&[data-hover="true"]': {
+          transform: 'translateX(5px)'
+        }
+      }}
+    >
+      <ArrowRight weight='bold' />
+    </Button.RightIcon>
+  </Button>
+);
+
+export const AsAnchor: Story<ButtonProps> = () => (
+  <Button as='a'>I&apos;m an anchor!</Button>
+);
