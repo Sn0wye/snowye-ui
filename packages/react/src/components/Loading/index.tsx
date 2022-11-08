@@ -13,7 +13,7 @@ const spin = keyframes({
 });
 
 export const Loading = styled(CircleNotch, {
-  color: '$white',
+  color: 'currentColor',
   animation: `${spin} 1s linear infinite`,
 
   variants: {
