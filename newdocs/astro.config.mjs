@@ -3,14 +3,23 @@ import react from '@astrojs/react';
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-  // Enable Preact to support Preact JSX components.
-  preact(),
-  // Enable React for the Algolia search component.
-  react(), mdx()],
-  site: `http://astro.build`
+    // Enable Preact to support Preact JSX components.
+    preact(),
+    // Enable React for the Algolia search component.
+    react(),
+    mdx()
+  ],
+  site: `http://astro.build`,
+  markdown: {
+    shikiConfig: {
+      theme: 'one-dark-pro',
+      wrap: true
+    }
+  },
+  jsxImportSource: 'react'
 });
