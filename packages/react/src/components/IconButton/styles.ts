@@ -60,6 +60,15 @@ export const IconButtonContainer = styled('button', {
     },
 
     size: {
+      xs: {
+        height: '$6',
+        width: '$6',
+
+        svg: {
+          width: '$4',
+          height: '$4'
+        }
+      },
       sm: {
         height: '$8',
         width: '$8'
@@ -70,7 +79,11 @@ export const IconButtonContainer = styled('button', {
       },
       lg: {
         height: '$12',
-        width: '$12'
+        width: '$12',
+
+        svg: {
+          size: '$7'
+        }
       }
     }
   },
