@@ -1,5 +1,12 @@
 # @snowye-ui/react
 
+## 1.5.0
+
+### Minor Changes
+
+- - Add more sizes to IconButton
+  - Add new utils to stiches config
+
 ## 1.4.0
 
 ### Minor Changes
