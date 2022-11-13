@@ -11,7 +11,7 @@ export const OPEN_GRAPH = {
       'astro logo on a starry expanse of space,' +
       ' with a purple saturn-like planet floating in the right foreground'
   },
-  twitter: 'astrodotbuild'
+  twitter: 'GabTrzimajewski'
 };
 
 // This is the type of the frontmatter you put in the docs markdown files.
@@ -31,6 +31,7 @@ export const KNOWN_LANGUAGES = {
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
 export const GITHUB_EDIT_URL = `https://github.com/Sn0wye/snowye-ui/tree/main/docs`;
+export const VIEW_SOURCE_URL = `https://github.com/Sn0wye/snowye-ui/tree/main/packages/snowye-ui/src/components/`;
 
 export const COMMUNITY_INVITE_URL = `https://astro.build/chat`; // TODO: add community integration
 
@@ -49,9 +50,8 @@ export const SIDEBAR: Sidebar = {
   en: {
     'Getting Started': [
       { text: 'Introduction', link: 'en/introduction' },
-      { text: 'Page 2', link: 'en/page-2' },
-      { text: 'Page 3', link: 'en/page-3' }
+      { text: 'Getting Started', link: 'en/getting-started' }
     ],
-    Components: [{ text: 'Page 4', link: 'en/page-4' }]
+    Components: [{ text: 'TextInput', link: 'en/components/TextInput' }]
   }
 };
