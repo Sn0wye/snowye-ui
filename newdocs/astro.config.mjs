@@ -20,6 +20,5 @@ export default defineConfig({
       theme: 'one-dark-pro',
       wrap: true
     }
-  },
-  jsxImportSource: 'react'
+  }
 });
