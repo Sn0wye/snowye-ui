@@ -1,4 +1,4 @@
-import { ComponentProps, ElementType } from 'react';
+import { ComponentProps, ElementType, forwardRef } from 'react';
 
 import { Loading } from '../Loading';
 import { IconButtonContainer } from './styles';
@@ -9,11 +9,10 @@ export interface IconButtonProps
   loading?: boolean;
 }
 
-export const IconButton = ({
-  children,
-  loading = false,
-  ...props
-}: IconButtonProps) => {
+export const IconButton = forwardRef<
+  ElementType<typeof IconButtonContainer>,
+  IconButtonProps
+>(({ children, loading = false, ...props }, forwardedRef) => {
   const content = loading ? (
     <Loading
       weight='bold'
@@ -26,7 +25,11 @@ export const IconButton = ({
     children
   );
 
-  return <IconButtonContainer {...props}>{content}</IconButtonContainer>;
-};
+  return (
+    <IconButtonContainer ref={forwardedRef} {...props}>
+      {content}
+    </IconButtonContainer>
+  );
+});
 
 IconButton.displayName = 'IconButton';
