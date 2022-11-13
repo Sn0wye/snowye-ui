@@ -195,7 +195,7 @@ code {
 
   font-family: var(--font-mono);
   font-size: 0.85em;
-  color: inherit;
+  color: var(--theme-code-text);
   background-color: var(--theme-code-inline-bg);
   padding: var(--padding-block) var(--padding-inline);
   margin: calc(var(--padding-block) * -1) -0.125em;
@@ -251,8 +251,8 @@ th {
 }
 
 pre {
-  background-color: var(--theme-code-bg);
-  color: var(--theme-code-text);
+  background-color: var(--theme-code-bg) !important;
+  color: var(--theme-code-text) !important;
 }
 
 blockquote code {

@@ -2,7 +2,7 @@
   --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   --font-body: system-ui, var(--font-fallback);
-  --font-mono: 'IBM Plex Mono', Consolas, 'Andale Mono WT', 'Andale Mono',
+  --font-mono: 'Fira Code', Consolas, 'Andale Mono WT', 'Andale Mono',
     'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco,
     'Courier New', Courier, monospace;
@@ -59,8 +59,8 @@
 
 :root {
   color-scheme: light;
-  --theme-accent: hsla(var(--color-blue), 1);
-  --theme-text-accent: hsla(var(--color-blue), 1);
+  --theme-accent: #8257e6;
+  --theme-text-accent: #8257e6;
   --theme-accent-opacity: 0.15;
   --theme-divider: hsla(var(--color-gray-95), 1);
   --theme-text: hsla(var(--color-gray-10), 1);
@@ -70,12 +70,12 @@
   --theme-bg: hsla(var(--color-base-white), 100%, 1);
   --theme-bg-hover: hsla(var(--color-gray-95), 1);
   --theme-bg-offset: hsla(var(--color-gray-90), 1);
-  --theme-bg-accent: hsla(var(--color-blue), var(--theme-accent-opacity));
-  --theme-code-inline-bg: hsla(var(--color-gray-95), 1);
+  --theme-bg-accent: #8257e6;
+  --theme-code-inline-bg: #292d3e;
   --theme-code-inline-text: var(--theme-text);
-  --theme-code-bg: hsla(217, 19%, 27%, 1);
+  --theme-code-bg: #292d3e;
   --theme-code-text: hsla(var(--color-gray-95), 1);
-  --theme-navbar-bg: hsla(var(--color-base-white), 100%, 1);
+  --theme-navbar-bg: rgba(255, 255, 255, 0.7);
   --theme-navbar-height: 6rem;
   --theme-selection-color: hsla(var(--color-blue), 1);
   --theme-selection-bg: hsla(var(--color-blue), var(--theme-accent-opacity));
@@ -89,22 +89,22 @@ body {
 :root.theme-dark {
   color-scheme: dark;
   --theme-accent-opacity: 0.15;
-  --theme-accent: hsla(var(--color-blue), 1);
-  --theme-text-accent: hsla(var(--color-blue), 1);
+  --theme-accent: #8257e6;
+  --theme-text-accent: #8257e6;
   --theme-divider: hsla(var(--color-gray-10), 1);
-  --theme-text: hsla(var(--color-gray-90), 1);
-  --theme-text-light: hsla(var(--color-gray-80), 1);
+  --theme-text: #e1e1e6;
+  --theme-text-light: #a9a9b2;
 
   /* @@@: not used anywhere */
-  --theme-text-lighter: hsla(var(--color-gray-40), 1);
-  --theme-bg: hsla(215, 28%, 17%, 1);
-  --theme-bg-hover: hsla(var(--color-gray-40), 1);
-  --theme-bg-offset: hsla(var(--color-gray-5), 1);
-  --theme-code-inline-bg: hsla(var(--color-gray-10), 1);
+  --theme-text-lighter: #a9a9b2;
+  --theme-bg: #242424;
+  --theme-bg-hover: #8257e6b3;
+  --theme-bg-offset: #121212;
+  --theme-code-inline-bg: #1a1a1a;
   --theme-code-inline-text: hsla(var(--color-base-white), 100%, 1);
-  --theme-code-bg: hsla(var(--color-gray-5), 1);
+  --theme-code-bg: #1a1a1a;
   --theme-code-text: hsla(var(--color-base-white), 100%, 1);
-  --theme-navbar-bg: hsla(215, 28%, 17%, 1);
+  --theme-navbar-bg: rgba(36, 36, 36, 0.7);
   --theme-selection-color: hsla(var(--color-base-white), 100%, 1);
   --theme-selection-bg: hsla(var(--color-purple), var(--theme-accent-opacity));
 
