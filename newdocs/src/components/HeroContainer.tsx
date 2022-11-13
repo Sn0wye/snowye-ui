@@ -23,6 +23,8 @@ const HeroContainer: FunctionComponent = ({ css, children }: Props) => {
         padding: '100px 0',
         borderTopLeftRadius: '$md',
         borderTopRightRadius: '$md',
+        border: 0,
+        marginTop: '$2',
         ...(css as any),
 
         '@bp3': { mx: '-$7' },
