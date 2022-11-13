@@ -7,7 +7,13 @@ import {
   radii,
   space
 } from '@snowye-ui/tokens';
-import { createStitches, defaultThemeMap } from '@stitches/react';
+import {
+  createStitches,
+  CSS as StitchesCSS,
+  defaultThemeMap
+} from '@stitches/react';
+
+type PossibleValues = number | string;
 
 export const {
   styled,
@@ -35,56 +41,58 @@ export const {
     fonts
   },
   utils: {
-    m: (value: number) => ({
+    m: (value: PossibleValues) => ({
       margin: value
     }),
-    mt: (value: number) => ({
+    mt: (value: PossibleValues) => ({
       marginTop: value
     }),
-    mr: (value: number) => ({
+    mr: (value: PossibleValues) => ({
       marginRight: value
     }),
-    mb: (value: number) => ({
+    mb: (value: PossibleValues) => ({
       marginBottom: value
     }),
-    ml: (value: number) => ({
+    ml: (value: PossibleValues) => ({
       marginLeft: value
     }),
-    mx: (value: number) => ({
+    mx: (value: PossibleValues) => ({
       marginLeft: value,
       marginRight: value
     }),
-    my: (value: number) => ({
+    my: (value: PossibleValues) => ({
       marginTop: value,
       marginBottom: value
     }),
-    p: (value: number) => ({
+    p: (value: PossibleValues) => ({
       padding: value
     }),
-    pt: (value: number) => ({
+    pt: (value: PossibleValues) => ({
       paddingTop: value
     }),
-    pr: (value: number) => ({
+    pr: (value: PossibleValues) => ({
       paddingRight: value
     }),
-    pb: (value: number) => ({
+    pb: (value: PossibleValues) => ({
       paddingBottom: value
     }),
-    pl: (value: number) => ({
+    pl: (value: PossibleValues) => ({
       paddingLeft: value
     }),
-    px: (value: number) => ({
+    px: (value: PossibleValues) => ({
       paddingLeft: value,
       paddingRight: value
     }),
-    py: (value: number) => ({
+    py: (value: PossibleValues) => ({
       paddingTop: value,
       paddingBottom: value
     }),
 
-    size: (value: number) => ({
+    size: (value: PossibleValues) => ({
       width: value,
       height: value
     })
   }
 });
+
+export type CSS = StitchesCSS<typeof config>;
