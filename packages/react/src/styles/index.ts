@@ -7,6 +7,7 @@ import {
   radii,
   space
 } from '@snowye-ui/tokens';
+import type * as Stitches from '@stitches/react';
 import { createStitches, defaultThemeMap } from '@stitches/react';
 
 export const {
@@ -35,3 +36,5 @@ export const {
     fonts
   }
 });
+
+export type CSS = Stitches.CSS<typeof config>;
