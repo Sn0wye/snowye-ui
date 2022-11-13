@@ -1,6 +1,7 @@
 ---
 import * as CONFIG from '../../config';
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../../languages';
+import GithubLogo from './GithubLogo.astro';
 import LanguageSelect from './LanguageSelect';
 import Search from './Search';
 import SidebarToggle from './SidebarToggle';
@@ -36,10 +37,15 @@ const lang = getLanguageFromURL(currentPage);
     <div class='search-item'>
       <Search client:idle />
     </div>
+    <div class='links'>
+      <a href='#'>
+        <GithubLogo size={32} />
+      </a>
+    </div>
   </nav>
 </header>
 
-<style>
+<style lang='scss'>
   header {
     z-index: 11;
     height: var(--theme-navbar-height);
@@ -65,31 +71,28 @@ const lang = getLanguageFromURL(currentPage);
     color: hsla(var(--color-base-white), 100%, 1);
     gap: 0.25em;
     z-index: -1;
-  }
 
-  .logo a {
-    display: flex;
-    padding: 0.5em 0.25em;
-    margin: -0.5em -0.25em;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    a {
+      display: flex;
+      padding: 0.5em 0.25em;
+      margin: -0.5em -0.25em;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 100ms ease-out;
+      color: var(--theme-text);
 
-  .logo a {
-    transition: color 100ms ease-out;
-    color: var(--theme-text);
-  }
+      &:hover,
+      &:focus {
+        color: var(--theme-accent);
+      }
+    }
 
-  .logo a:hover,
-  .logo a:focus {
-    color: var(--theme-text-accent);
-  }
-
-  .logo h1 {
-    display: none;
-    font: inherit;
-    color: inherit;
-    margin: 0;
+    h1 {
+      display: none;
+      font: inherit;
+      color: inherit;
+      margin: 0;
+    }
   }
 
   .nav-wrapper {
@@ -102,6 +105,17 @@ const lang = getLanguageFromURL(currentPage);
     padding: 0 1rem;
   }
 
+  .links {
+    a {
+      color: var(--theme-text);
+      transition: color 100ms ease-out;
+
+      &:hover {
+        color: var(--theme-accent);
+      }
+    }
+  }
+
   @media (min-width: 50em) {
     header {
       position: static;
@@ -112,10 +126,10 @@ const lang = getLanguageFromURL(currentPage);
       width: auto;
       margin: 0;
       z-index: 0;
-    }
 
-    .logo h1 {
-      display: initial;
+      h1 {
+        display: initial;
+      }
     }
 
     .menu-toggle {
