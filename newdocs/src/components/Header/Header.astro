@@ -24,7 +24,7 @@ const lang = getLanguageFromURL(currentPage);
     </div>
     <div class='logo flex'>
       <a href='/'>
-        <SnowyeLogo size={46} />
+        <SnowyeLogo size={32} />
         <h1>{CONFIG.SITE.title ?? 'Documentation'}</h1>
       </a>
     </div>
@@ -63,7 +63,6 @@ const lang = getLanguageFromURL(currentPage);
     flex: 1;
     display: flex;
     overflow: hidden;
-    width: 30px;
     font-size: 2rem;
     flex-shrink: 0;
     font-weight: 600;
@@ -71,6 +70,11 @@ const lang = getLanguageFromURL(currentPage);
     color: hsla(var(--color-base-white), 100%, 1);
     gap: 0.25em;
     z-index: -1;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
 
     a {
       display: flex;
