@@ -1,5 +1,11 @@
 # @snowye-ui/react
 
+## 1.6.0
+
+### Minor Changes
+
+- - add hideClose to Popover
+
 ## 1.5.0
 
 ### Minor Changes

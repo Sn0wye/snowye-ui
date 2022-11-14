@@ -1,5 +1,12 @@
 # @example/docs
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @snowye-ui/react@1.6.0
+
 ## 0.0.3
 
 ### Patch Changes
