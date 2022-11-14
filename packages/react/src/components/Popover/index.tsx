@@ -27,22 +27,30 @@ PopoverRoot.displayName = 'Popover.Root';
 type PopoverContentProps = ComponentProps<typeof StyledContent> & {
   css?: CSS;
   hideArrow?: boolean;
+  hideClose?: boolean;
 };
 
 const PopoverContent = forwardRef<
   ElementRef<typeof StyledContent>,
   PopoverContentProps
->(({ children, hideArrow = false, ...props }, fowardedRef) => (
-  <Portal>
-    <StyledContent sideOffset={2} {...props} ref={fowardedRef}>
-      {children}
-      {!hideArrow && <StyledArrow />}
-      <Close asChild>
-        <X />
-      </Close>
-    </StyledContent>
-  </Portal>
-));
+>(
+  (
+    { children, hideArrow = false, hideClose = false, ...props },
+    fowardedRef
+  ) => (
+    <Portal>
+      <StyledContent sideOffset={2} {...props} ref={fowardedRef}>
+        {children}
+        {!hideArrow && <StyledArrow />}
+        {!hideClose && (
+          <Close asChild>
+            <X />
+          </Close>
+        )}
+      </StyledContent>
+    </Portal>
+  )
+);
 
 PopoverContent.displayName = 'Popover.Content';
 
