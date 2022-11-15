@@ -28,6 +28,7 @@ body {
   font-size: clamp(0.9rem, 0.75rem + 0.375vw + var(--user-font-scale), 1rem);
   line-height: 1.5;
   max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
 }
 
 nav ul {
@@ -69,28 +70,29 @@ h2 {
 }
 
 h1 {
-  font-size: 3.25rem;
+  font-size: 2.1875rem;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.6875rem;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.1875rem;
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 0.9375rem;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 p {
   line-height: 1.65em;
+  margin-bottom: 0.9375rem;
 }
 
 .content ul {
