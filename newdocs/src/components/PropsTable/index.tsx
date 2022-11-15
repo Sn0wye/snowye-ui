@@ -1,42 +1,35 @@
 /** @jsxImportSource react */
-import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
+import { IconButton, Popover, Text } from '@snowye-ui/react';
 import { Info } from 'phosphor-react';
-import { ComponentProps, ElementType } from 'react';
-import { IconButton, Popover, Text } from '../../../../packages/react/dist';
-import { CSS, styled } from '../../styles/stitches';
+import { styled } from '../../styles/stitches';
 import { DividerHorizontalIcon } from './DividerHorizontal';
 import { RegionTable } from './RegionTable';
 
-const StyledBox = styled('div', {
+const Box = styled('div', {
   boxSizing: 'border-box'
 });
-
-interface BoxProps extends ComponentProps<typeof StyledBox> {
-  as?: ElementType;
-  css?: CSS;
-}
-
-const Box = ({ children, css, ...props }: BoxProps) => (
-  <StyledBox css={css} {...props}>
-    {children}
-  </StyledBox>
-);
 
 const Td = styled('td', {
   py: '$3',
   pr: '$4',
   whiteSpace: 'nowrap',
-  height: '$12',
-  verticalAlign: 'center'
+  height: 56,
+  verticalAlign: 'center',
+  boxSizing: 'border-box'
+
+  // '&:not(:first-child, :nth-child(2), :nth-child(3))': {
+  //   borderTop: '1px solid $gray600'
+  // }
 });
 
 export const Code = styled('code', {
   fontFamily: 'Fira Code',
-  fontSize: 'max(12px, 85%)',
+  fontSize: '$md',
   whiteSpace: 'nowrap',
   padding: '0 3px 2px 3px',
   borderRadius: 0,
   margin: 0,
+  height: '$6',
 
   variants: {
     variant: {
@@ -81,7 +74,9 @@ export const PropsTable = ({
       css={{
         width: '100%',
         textAlign: 'left',
-        borderCollapse: 'collapse'
+        borderCollapse: 'collapse',
+        whiteSpace: 'nowrap',
+        boxShadow: 'border-box'
       }}
       aria-label={hasAriaLabel ? ariaLabel : 'Component Props'}
       aria-labelledby={ariaLabelledBy}
@@ -145,8 +140,9 @@ export const PropsTable = ({
             <tr key={`${name}-${i}`}>
               <Td
                 css={{
-                  width: '100%',
-                  display: 'flex'
+                  // display: 'flex'
+                  borderBottom: '1px solid $gray600',
+                  whiteSpace: 'nowrap'
                 }}
               >
                 <Code>
@@ -161,9 +157,7 @@ export const PropsTable = ({
                         variant='tertiary'
                         css={{
                           ml: '$2',
-                          color: '$gray200',
-                          height: '$6',
-                          width: '$6'
+                          color: '$gray200'
                         }}
                       >
                         {/* <AccessibleIcon label='Prop description'> */}
@@ -172,29 +166,24 @@ export const PropsTable = ({
                       </IconButton>
                     </Popover.Trigger>
                     <Popover.Content
+                      css={{ maxWidth: 'max-content', py: '$2', px: '$3' }}
+                      hideClose
                       side='top'
                       onOpenAutoFocus={event => {
                         event.preventDefault();
                         (event.currentTarget as HTMLElement)?.focus();
                       }}
                     >
-                      <Box
-                        css={{
-                          py: '$2',
-                          px: '$3'
-                        }}
-                      >
-                        <Text size='sm' css={{ lineHeight: '20px' }}>
-                          {description}
-                        </Text>
-                      </Box>
+                      <Text size='md' css={{ lineHeight: '20px' }}>
+                        {description}
+                      </Text>
                     </Popover.Content>
                   </Popover.Root>
                 )}
               </Td>
               <Td
                 css={{
-                  width: '27.5%'
+                  borderBottom: '1px solid $gray600'
                 }}
               >
                 <Code
@@ -220,24 +209,17 @@ export const PropsTable = ({
                     </Popover.Trigger>
                     <Popover.Content
                       side='top'
-                      css={{ maxWidth: 'max-content' }}
+                      css={{ maxWidth: 'max-content', py: '$2', px: '$3' }}
+                      hideClose
                     >
-                      <Box
-                        css={{
-                          py: '$2',
-                          px: '$2',
-                          whiteSpace: 'nowrap'
-                        }}
-                      >
-                        <Code>{type}</Code>
-                      </Box>
+                      <Code>{type}</Code>
                     </Popover.Content>
                   </Popover.Root>
                 )}
               </Td>
               <Td
                 css={{
-                  width: '27.5%'
+                  borderBottom: '1px solid $gray600'
                 }}
               >
                 {Boolean(defaultValue) ? (
@@ -248,13 +230,13 @@ export const PropsTable = ({
                     {defaultValue}
                   </Code>
                 ) : (
-                  <Box
-                    as={AccessibleIcon}
-                    // label='No default value'
-                    css={{ color: '$gray500' }}
-                  >
-                    <DividerHorizontalIcon />
-                  </Box>
+                  // <Box
+                  //   as={AccessibleIcon}
+                  //   // label='No default value'
+                  //   css={{ color: '$gray500' }}
+                  // >
+                  <DividerHorizontalIcon />
+                  // </Box>
                 )}
               </Td>
             </tr>
