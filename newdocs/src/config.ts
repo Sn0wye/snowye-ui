@@ -48,9 +48,10 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
   en: {
-    'Getting Started': [
-      { text: 'Introduction', link: 'en/introduction' },
-      { text: 'Getting Started', link: 'en/getting-started' }
+    Overview: [
+      { text: 'Introduction', link: 'en/overview/introduction' },
+      { text: 'Getting Started', link: 'en/overview/getting-started' },
+      { text: 'Additional Styling', link: 'en/overview/additional-styling' }
     ],
     Components: [{ text: 'TextInput', link: 'en/components/TextInput' }]
   }
