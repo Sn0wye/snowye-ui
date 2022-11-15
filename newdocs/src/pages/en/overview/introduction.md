@@ -1,7 +1,7 @@
 ---
 title: Introduction
 description: Docs intro
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 ---
 
 **Snowye-ui is a open source component ui library build on top of [Radix-ui](https://radix-ui.com/), design to be simple, easy and flexible to use.**
