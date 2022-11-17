@@ -87,7 +87,10 @@ export const PropsTable = ({
               width: '45%'
             }}
           >
-            <Text size='sm' css={{ color: '$gray200' }}>
+            <Text
+              size='sm'
+              css={{ color: '$gray200', fontFamily: 'Untitled Sans' }}
+            >
               Prop
             </Text>
           </Box>
@@ -100,7 +103,10 @@ export const PropsTable = ({
               width: '27.5%'
             }}
           >
-            <Text size='sm' css={{ color: '$gray200' }}>
+            <Text
+              size='sm'
+              css={{ color: '$gray200', fontFamily: 'Untitled Sans' }}
+            >
               Type
             </Text>
           </Box>
@@ -113,7 +119,10 @@ export const PropsTable = ({
               width: '27.5%'
             }}
           >
-            <Text size='sm' css={{ color: '$gray200' }}>
+            <Text
+              size='sm'
+              css={{ color: '$gray200', fontFamily: 'Untitled Sans' }}
+            >
               Default
             </Text>
           </Box>

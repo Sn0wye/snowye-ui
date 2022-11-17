@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Untitled Sans';
-  src: url(../../public/static/font/UnititledSans.woff2);
+  src: url(/static/font/UnititledSans.woff2);
 }
 
 :root {
