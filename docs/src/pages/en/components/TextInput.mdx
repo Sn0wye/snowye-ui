@@ -62,9 +62,57 @@ Contains all parts of the TextInput.
   ]}
 />
 
+### LeftIcon
+
+A feedback icon that sits on the left side of the input field.
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode',
+      description: 'Icon shown when the text is visible'
+    }
+  ]}
+/>
+
+### Prefix
+
+A prefix text shown before the input text
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'string',
+      description: 'The text that will be shown before the input text'
+    }
+  ]}
+/>
+
+### Input
+
+The HTML input itself
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode',
+      description: 'Icon shown when the text is visible'
+    }
+  ]}
+/>
+
 ### RightIcon
 
-A feedback icon that fits on the left side of the input field.
+A feedback icon/text visibility toggler that sits on the right side of the input field.
 
 <PropsTable
   client:load
@@ -73,13 +121,13 @@ A feedback icon that fits on the left side of the input field.
       name: 'activeIcon',
       required: false,
       type: 'ReactNode',
-      description: 'Teste'
+      description: 'Icon shown when the text is visible'
     },
     {
       name: 'inactiveIcon',
       required: false,
-      type: '(value: string) => void',
-      typeSimple: 'function'
+      type: 'ReactNode',
+      description: 'Icon shown when the text is not visible'
     }
   ]}
 />
