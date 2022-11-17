@@ -1,0 +1,85 @@
+---
+title: 'TextInput'
+description: 'A component to get user input inside a text field.'
+layout: ../../../layouts/MainLayout.astro
+---
+
+import TextInputDemo from '../../../demos/TextInputDemo.tsx';
+import HeroContainer from '../../../components/HeroContainer.tsx';
+import { PropsTable, Code } from '../../../components/PropsTable';
+
+A component to get user input inside a text field.
+
+## Anatomy
+
+Mount all pieces together and create your input
+
+```tsx
+import { TextInput } from '@snowye-ui/react';
+
+<TextInput.Root>
+  <TextInput.LeftIcon>{/* Your Icon */}</TextInput.LeftIcon>
+  <TextInput.Input placeholder='Type some text...' />
+  <TextInput.RightIcon
+    activeIcon={/* Icon when text is visible */}
+    inactiveIcon={/* Icon when text not visible */}
+  />
+</TextInput.Root>;
+```
+
+## Example
+
+<HeroContainer client:load>
+  <TextInputDemo client:load />
+</HeroContainer>
+
+## API Reference
+
+### Root
+
+Contains all parts of the TextInput.
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode'
+    },
+    {
+      name: 'error',
+      required: false,
+      type: 'boolean',
+      default: 'false'
+    },
+    {
+      name: 'disabled',
+      required: false,
+      type: 'boolean',
+      default: 'false'
+    }
+  ]}
+/>
+
+### RightIcon
+
+A feedback icon that fits on the left side of the input field.
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'activeIcon',
+      required: false,
+      type: 'ReactNode',
+      description: 'Teste'
+    },
+    {
+      name: 'inactiveIcon',
+      required: false,
+      type: '(value: string) => void',
+      typeSimple: 'function'
+    }
+  ]}
+/>

@@ -1,5 +1,25 @@
 # @snowye-ui/react
 
+## 1.6.0
+
+### Minor Changes
+
+- - add hideClose to Popover
+
+## 1.5.0
+
+### Minor Changes
+
+- - Add more sizes to IconButton
+  - Add new utils to stiches config
+
+## 1.4.0
+
+### Minor Changes
+
+- - Added forwardRef to IconButton
+  - Added Popover Component
+
 ## 1.3.0
 
 ### Minor Changes

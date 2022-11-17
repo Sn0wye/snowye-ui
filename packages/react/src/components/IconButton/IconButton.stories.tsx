@@ -34,7 +34,7 @@ export default {
       }
     },
     size: {
-      options: ['sm', 'md', 'lg'],
+      options: ['xs', 'sm', 'md', 'lg'],
       control: {
         type: 'inline-radio'
       }

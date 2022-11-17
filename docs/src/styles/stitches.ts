@@ -7,8 +7,11 @@ import {
   radii,
   space
 } from '@snowye-ui/tokens';
-import type * as Stitches from '@stitches/react';
-import { createStitches, defaultThemeMap } from '@stitches/react';
+import {
+  createStitches,
+  CSS as StitchesCSS,
+  defaultThemeMap
+} from '@stitches/react';
 
 type PossibleValues = number | string;
 
@@ -37,7 +40,6 @@ export const {
     space,
     fonts
   },
-
   utils: {
     m: (value: PossibleValues) => ({
       margin: value
@@ -93,4 +95,4 @@ export const {
   }
 });
 
-export type CSS = Stitches.CSS<typeof config>;
+export type CSS = StitchesCSS<typeof config>;
