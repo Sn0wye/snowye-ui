@@ -23,6 +23,8 @@ export type Frontmatter = {
   dir?: 'ltr' | 'rtl';
   ogLocale?: string;
   lang?: string;
+  next?: string;
+  prev?: string;
 };
 
 export const KNOWN_LANGUAGES = {

@@ -2,6 +2,7 @@
 title: Introduction
 description: Docs intro
 layout: ../../../layouts/MainLayout.astro
+next: 'overview/getting-started'
 ---
 
 **Snowye-ui is a open source component ui library build on top of [Radix-ui](https://radix-ui.com/), design to be simple, easy and flexible to use.**
