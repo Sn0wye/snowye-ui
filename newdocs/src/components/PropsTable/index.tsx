@@ -1,4 +1,5 @@
 /** @jsxImportSource react */
+import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 import { IconButton, Popover, Text } from '@snowye-ui/react';
 import { Info } from 'phosphor-react';
 import { styled } from '../../styles/stitches';
@@ -10,16 +11,11 @@ const Box = styled('div', {
 });
 
 const Td = styled('td', {
+  boxSizing: 'border-box',
   py: '$3',
   pr: '$4',
   whiteSpace: 'nowrap',
-  height: 56,
-  verticalAlign: 'center',
-  boxSizing: 'border-box'
-
-  // '&:not(:first-child, :nth-child(2), :nth-child(3))': {
-  //   borderTop: '1px solid $gray600'
-  // }
+  height: 56
 });
 
 export const Code = styled('code', {
@@ -75,8 +71,7 @@ export const PropsTable = ({
         width: '100%',
         textAlign: 'left',
         borderCollapse: 'collapse',
-        whiteSpace: 'nowrap',
-        boxShadow: 'border-box'
+        whiteSpace: 'nowrap'
       }}
       aria-label={hasAriaLabel ? ariaLabel : 'Component Props'}
       aria-labelledby={ariaLabelledBy}
@@ -140,12 +135,16 @@ export const PropsTable = ({
             <tr key={`${name}-${i}`}>
               <Td
                 css={{
-                  // display: 'flex'
                   borderBottom: '1px solid $gray600',
                   whiteSpace: 'nowrap'
                 }}
               >
-                <Code>
+                <Code
+                  css={{
+                    display: 'inline-block',
+                    verticalAlign: 'middle'
+                  }}
+                >
                   {name}
                   {required ? '*' : null}
                 </Code>
@@ -156,17 +155,25 @@ export const PropsTable = ({
                         size='xs'
                         variant='tertiary'
                         css={{
-                          ml: '$2',
+                          display: 'inline-flex',
+                          verticalAlign: 'middle',
+                          bottom: 0,
+                          ml: '$1',
                           color: '$gray200'
                         }}
                       >
-                        {/* <AccessibleIcon label='Prop description'> */}
-                        <Info size={16} />
-                        {/* </AccessibleIcon> */}
+                        <AccessibleIcon label='Prop description'>
+                          <Info size={16} />
+                        </AccessibleIcon>
                       </IconButton>
                     </Popover.Trigger>
                     <Popover.Content
-                      css={{ maxWidth: 'max-content', py: '$2', px: '$3' }}
+                      css={{
+                        maxWidth: 'max-content',
+                        py: '$2',
+                        px: '$3',
+                        fontFamily: 'Untitled Sans !important'
+                      }}
                       hideClose
                       side='top'
                       onOpenAutoFocus={event => {
@@ -174,7 +181,13 @@ export const PropsTable = ({
                         (event.currentTarget as HTMLElement)?.focus();
                       }}
                     >
-                      <Text size='md' css={{ lineHeight: '20px' }}>
+                      <Text
+                        size='md'
+                        css={{
+                          lineHeight: '20px',
+                          fontFamily: 'Untitled Sans'
+                        }}
+                      >
                         {description}
                       </Text>
                     </Popover.Content>
@@ -187,7 +200,12 @@ export const PropsTable = ({
                 }}
               >
                 <Code
-                  css={{ borderColor: '$gray700', color: '$gray200' }}
+                  css={{
+                    borderColor: '$gray700',
+                    color: '$gray200',
+                    display: 'inline-block',
+                    verticalAlign: 'middle'
+                  }}
                   variant='gray'
                 >
                   {Boolean(typeSimple) ? typeSimple : type}
@@ -199,17 +217,25 @@ export const PropsTable = ({
                         size='xs'
                         variant='tertiary'
                         css={{
-                          color: '$gray200'
+                          ml: '$1',
+                          color: '$gray200',
+                          display: 'inline-flex',
+                          verticalAlign: 'middle'
                         }}
                       >
-                        {/* <AccessibleIcon label='See full type'> */}
-                        <Info size={16} />
-                        {/* </AccessibleIcon> */}
+                        <AccessibleIcon label='See full type'>
+                          <Info size={16} />
+                        </AccessibleIcon>
                       </IconButton>
                     </Popover.Trigger>
                     <Popover.Content
                       side='top'
-                      css={{ maxWidth: 'max-content', py: '$2', px: '$3' }}
+                      css={{
+                        maxWidth: 'max-content',
+                        py: '$2',
+                        px: '$3',
+                        fontFamily: 'Untitled Sans'
+                      }}
                       hideClose
                     >
                       <Code>{type}</Code>
@@ -230,13 +256,13 @@ export const PropsTable = ({
                     {defaultValue}
                   </Code>
                 ) : (
-                  // <Box
-                  //   as={AccessibleIcon}
-                  //   // label='No default value'
-                  //   css={{ color: '$gray500' }}
-                  // >
-                  <DividerHorizontalIcon />
-                  // </Box>
+                  <Box
+                    as={AccessibleIcon}
+                    label='No default value'
+                    css={{ color: '$gray500' }}
+                  >
+                    <DividerHorizontalIcon />
+                  </Box>
                 )}
               </Td>
             </tr>
