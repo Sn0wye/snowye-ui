@@ -55,6 +55,9 @@ export const SIDEBAR: Sidebar = {
       { text: 'Getting Started', link: 'en/overview/getting-started' },
       { text: 'Additional Styling', link: 'en/overview/additional-styling' }
     ],
-    Components: [{ text: 'TextInput', link: 'en/components/TextInput' }]
+    Components: [
+      { text: 'Avatar', link: 'en/components/Avatar' },
+      { text: 'TextInput', link: 'en/components/TextInput' }
+    ]
   }
 };
