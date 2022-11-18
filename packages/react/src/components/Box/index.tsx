@@ -1,16 +1,14 @@
 import type { ComponentProps, ElementType } from 'react';
 
-import { styled } from '../../styles';
+import { CSS, styled } from '../../styles';
 
 export const Box = styled('div', {
-  padding: '$4',
-  borderRadius: '$md',
-  backgroundColor: '$gray800',
-  border: '1px solid $gray600'
+  boxSizing: 'border-box'
 });
 
 Box.displayName = 'Box';
 
 export interface BoxProps extends ComponentProps<typeof Box> {
   as?: ElementType;
+  css?: CSS;
 }
