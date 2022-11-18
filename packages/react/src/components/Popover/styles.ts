@@ -9,7 +9,6 @@ export const StyledContent = styled(PopoverPrimitive.Content, {
     'hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px',
   minWidth: 200,
   minHeight: '$6',
-  maxWidth: 265,
   padding: '$3 $5',
   display: 'flex',
   flexDirection: 'column',
