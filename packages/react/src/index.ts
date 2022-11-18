@@ -8,6 +8,7 @@ export * from './components/IconButton';
 export * from './components/Loading';
 export * from './components/MultiStep';
 export * from './components/Popover';
+export * from './components/Surface';
 export * from './components/Text';
 export * from './components/TextArea';
 export * from './components/TextInput';
