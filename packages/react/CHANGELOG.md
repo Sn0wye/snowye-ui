@@ -1,5 +1,12 @@
 # @snowye-ui/react
 
+## 1.7.0
+
+### Minor Changes
+
+- - Replaced old Box component with Surface
+  - Did some style changes to Popover
+
 ## 1.6.0
 
 ### Minor Changes
