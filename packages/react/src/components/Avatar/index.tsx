@@ -1,20 +1,37 @@
-import { User } from 'phosphor-react';
 import { ComponentProps } from 'react';
 
-import { AvatarContainer, AvatarFallback, AvatarImage } from './styles';
+import { Container, Fallback, Image } from './styles';
 
-export interface AvatarProps extends ComponentProps<typeof AvatarImage> {}
+interface AvatarRootProps extends ComponentProps<typeof Image> {}
 
-export const Avatar = (props: AvatarProps) => {
+const AvatarRoot = ({ children, ...props }: AvatarRootProps) => {
   return (
-    <AvatarContainer>
-      <AvatarImage {...props} />
+    <Container>
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
+      <Image {...props} />
 
-      <AvatarFallback delayMs={600}>
-        <User />
-      </AvatarFallback>
-    </AvatarContainer>
+      {children}
+    </Container>
   );
 };
 
-Avatar.displayName = 'Avatar';
+AvatarRoot.displayName = 'Avatar';
+
+/* ----------------------------------------------------------------------------------------------- */
+
+interface AvatarFallbackProps extends ComponentProps<typeof Fallback> {}
+
+const AvatarFallback = ({ children, ...props }: AvatarFallbackProps) => {
+  return <Fallback {...props}>{children}</Fallback>;
+};
+
+AvatarFallback.displayName = 'Avatar.Fallback';
+
+/* ----------------------------------------------------------------------------------------------- */
+
+export const Avatar = Object.assign(AvatarRoot, {
+  Root: AvatarRoot,
+  Fallback: AvatarFallback
+});
+
+export type { AvatarRootProps, AvatarFallbackProps };

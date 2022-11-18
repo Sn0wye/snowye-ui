@@ -1,5 +1,6 @@
-import { Avatar, AvatarProps, Box } from '@snowye-ui/react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { Avatar, AvatarRootProps, Box } from '@snowye-ui/react';
+import type { Meta, Story, StoryObj } from '@storybook/react';
+import { User } from 'phosphor-react';
 
 export default {
   title: 'Data Display/Avatar',
@@ -9,12 +10,20 @@ export default {
     alt: 'Gabriel Trzimajewski'
   },
   decorators: [Story => <Box>{Story()}</Box>]
-} as Meta<AvatarProps>;
+} as Meta<AvatarRootProps>;
 
-export const Primary: StoryObj<AvatarProps> = {};
+export const Primary: StoryObj<AvatarRootProps> = {};
 
-export const WithFallback: StoryObj<AvatarProps> = {
-  args: {
-    src: undefined
-  }
-};
+export const WithFallback: Story<AvatarRootProps> = () => (
+  <Avatar>
+    <Avatar.Fallback>GT</Avatar.Fallback>
+  </Avatar>
+);
+
+export const WithFallbackIcon: Story<AvatarRootProps> = () => (
+  <Avatar>
+    <Avatar.Fallback>
+      <User color='#fff' />
+    </Avatar.Fallback>
+  </Avatar>
+);
