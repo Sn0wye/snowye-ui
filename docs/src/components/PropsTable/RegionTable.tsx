@@ -1,10 +1,5 @@
 /** @jsxImportSource react */
-import { BoxProps } from '@snowye-ui/react';
-import { styled } from '../../styles/stitches';
-
-const Box = styled('div', {
-  boxSizing: 'border-box'
-});
+import { Box, BoxProps } from '@snowye-ui/react';
 
 export const RegionTable = ({
   'aria-label': ariaLabel,

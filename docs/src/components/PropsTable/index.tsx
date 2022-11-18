@@ -1,14 +1,10 @@
 /** @jsxImportSource react */
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
-import { IconButton, Popover, Text } from '@snowye-ui/react';
+import { Box, IconButton, Popover, Text } from '@snowye-ui/react';
 import { Info } from 'phosphor-react';
 import { styled } from '../../styles/stitches';
 import { DividerHorizontalIcon } from './DividerHorizontal';
 import { RegionTable } from './RegionTable';
-
-const Box = styled('div', {
-  boxSizing: 'border-box'
-});
 
 const Td = styled('td', {
   boxSizing: 'border-box',
