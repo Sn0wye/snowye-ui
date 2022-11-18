@@ -236,7 +236,7 @@ export const PropsTable = ({
                     <Popover.Content
                       side='top'
                       css={{
-                        maxWidth: 'max-content',
+                        width: '100%',
                         py: '$2',
                         px: '$3',
                         fontFamily: 'Untitled Sans'
