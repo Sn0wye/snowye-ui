@@ -1,4 +1,4 @@
-import { Box, MultiStep, MultiStepProps } from '@snowye-ui/react';
+import { MultiStep, MultiStepProps, Surface } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 export default {
@@ -10,13 +10,13 @@ export default {
   },
   decorators: [
     Story => (
-      <Box
+      <Surface
         css={{
           width: '50%'
         }}
       >
         {Story()}
-      </Box>
+      </Surface>
     )
   ]
 } as Meta<MultiStepProps>;

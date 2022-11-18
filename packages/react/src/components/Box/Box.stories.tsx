@@ -1,12 +1,9 @@
-import { Box, BoxProps, Text } from '@snowye-ui/react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { Box, BoxProps } from '@snowye-ui/react';
+import type { Meta, Story } from '@storybook/react';
 
 export default {
-  title: 'Surfaces/Box',
+  title: 'Layout/Box',
   component: Box,
-  args: {
-    children: <Text>This is a box component</Text>
-  },
   argTypes: {
     children: {
       control: {
@@ -16,4 +13,15 @@ export default {
   }
 } as Meta<BoxProps>;
 
-export const Primary: StoryObj<BoxProps> = {};
+export const Primary: Story<BoxProps> = () => (
+  <Box
+    css={{
+      width: '20rem',
+      height: '20rem',
+      backgroundColor: '$gray700',
+      '&:hover': {
+        backgroundColor: '$gray600'
+      }
+    }}
+  />
+);

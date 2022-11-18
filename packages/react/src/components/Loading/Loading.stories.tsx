@@ -1,4 +1,4 @@
-import { Box, Loading, LoadingProps } from '@snowye-ui/react';
+import { Loading, LoadingProps, Surface } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 export default {
@@ -17,7 +17,7 @@ export default {
   },
   decorators: [
     Story => (
-      <Box
+      <Surface
         css={{
           display: 'flex',
           alignItems: 'center',
@@ -25,7 +25,7 @@ export default {
         }}
       >
         {Story()}
-      </Box>
+      </Surface>
     )
   ]
 } as Meta<LoadingProps>;

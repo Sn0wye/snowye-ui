@@ -1,4 +1,10 @@
-import { Box, Heading, Popover, PopoverProps, Text } from '@snowye-ui/react';
+import {
+  Heading,
+  Popover,
+  PopoverProps,
+  Surface,
+  Text
+} from '@snowye-ui/react';
 import type { Meta } from '@storybook/react';
 import { Info } from 'phosphor-react';
 
@@ -9,7 +15,7 @@ export default {
   component: Popover,
   decorators: [
     Story => (
-      <Box
+      <Surface
         css={{
           width: '100%',
           height: '100%',
@@ -20,7 +26,7 @@ export default {
         }}
       >
         {Story()}
-      </Box>
+      </Surface>
     )
   ]
 } as Meta<PopoverProps>;

@@ -1,4 +1,4 @@
-import { Box, Checkbox, CheckboxProps, Text } from '@snowye-ui/react';
+import { Checkbox, CheckboxProps, Surface, Text } from '@snowye-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   args: {},
   decorators: [
     Story => (
-      <Box
+      <Surface
         as='label'
         css={{
           display: 'flex',
@@ -16,7 +16,7 @@ export default {
       >
         {Story()}
         <Text size='sm'>I accept the terms.</Text>
-      </Box>
+      </Surface>
     )
   ]
 } as Meta<CheckboxProps>;
