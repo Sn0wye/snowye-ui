@@ -1,5 +1,5 @@
 /** @jsxImportSource react */
-import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
+import * as AccessibleIcon from '@radix-ui/react-accessible-icon';
 import { Box, IconButton, Popover, Text } from '@snowye-ui/react';
 import { Info } from 'phosphor-react';
 import { styled } from '../../styles/stitches';
@@ -167,9 +167,9 @@ export const PropsTable = ({
                           color: '$gray200'
                         }}
                       >
-                        <AccessibleIcon label='Prop description'>
+                        <AccessibleIcon.Root label='Prop description'>
                           <Info size={16} />
-                        </AccessibleIcon>
+                        </AccessibleIcon.Root>
                       </IconButton>
                     </Popover.Trigger>
                     <Popover.Content
@@ -228,9 +228,9 @@ export const PropsTable = ({
                           verticalAlign: 'middle'
                         }}
                       >
-                        <AccessibleIcon label='See full type'>
+                        <AccessibleIcon.Root label='See full type'>
                           <Info size={16} />
-                        </AccessibleIcon>
+                        </AccessibleIcon.Root>
                       </IconButton>
                     </Popover.Trigger>
                     <Popover.Content
@@ -262,7 +262,7 @@ export const PropsTable = ({
                   </Code>
                 ) : (
                   <Box
-                    as={AccessibleIcon}
+                    as={AccessibleIcon.Root}
                     label='No default value'
                     css={{ color: '$gray500' }}
                   >
