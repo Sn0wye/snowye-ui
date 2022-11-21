@@ -1,0 +1,111 @@
+---
+title: 'Button'
+description: 'A component used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.'
+layout: ../../../layouts/MainLayout.astro
+---
+
+import ButtonDemo from '../../../demos/ButtonDemo.tsx';
+import HeroContainer from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+
+A component used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+## Anatomy
+
+Mount all pieces together and create your Button
+
+```tsx
+import { Button } from '@snowye-ui/react';
+
+<Button.Root>
+  <Button.LeftIcon>{/* Your Icon */}</Button.LeftIcon>
+  Hello World!
+  <Button.RightIcon>{/* Your Icon */}</Button.RightIcon>
+</Button.Root>;
+```
+
+## Example
+
+<HeroContainer client:load>
+  <ButtonDemo client:load />
+</HeroContainer>
+
+## API Reference
+
+### Root
+
+Contains all parts of the Button.
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'variant',
+      required: false,
+      typeSimple: 'enum',
+      type: 'primary | secondary | tertiary | danger'
+    },
+    {
+      name: 'size',
+      required: false,
+      typeSimple: 'enum',
+      type: 'sm | md | lg'
+    },
+    {
+      name: 'as',
+      description:
+        'Render the button as another HTML element, like an anchor or a div',
+      required: false,
+      typeSimple: 'ElementType',
+      type: 'a | div | span | ...'
+    },
+    {
+      name: 'loading',
+      required: false,
+      type: 'boolean',
+      default: 'false'
+    },
+    {
+      name: 'disabled',
+      required: false,
+      type: 'boolean',
+      default: 'false'
+    },
+    {
+      name: 'full',
+      required: false,
+      type: 'boolean',
+      default: 'false'
+    }
+  ]}
+/>
+
+### LeftIcon
+
+A feedback icon that sits on the left side of the button.
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode'
+    }
+  ]}
+/>
+
+### RightIcon
+
+A feedback icon that sits on the right side of the button.
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode'
+    }
+  ]}
+/>
