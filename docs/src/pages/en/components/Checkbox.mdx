@@ -1,0 +1,79 @@
+---
+title: 'Checkbox'
+description: 'A component used in forms when a user needs to select multiple values from several options.'
+layout: ../../../layouts/MainLayout.astro
+---
+
+import CheckboxDemo from '../../../demos/CheckboxDemo.tsx';
+import HeroContainer from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+
+A component used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+## Anatomy
+
+Mount all pieces together and create your Button
+
+```tsx
+import { Checkbox } from '@snowye-ui/react';
+
+<Checkbox />;
+```
+
+## Example
+
+<HeroContainer client:load>
+  <CheckboxDemo client:load />
+</HeroContainer>
+
+## API Reference
+
+### Root
+
+Contains all parts of the Checkbox.
+
+<PropsTable
+  client:load
+  data={[
+    {
+      name: 'defaultChecked',
+      required: false,
+      type: 'boolean',
+      description:
+        'The checked state of the checkbox when it is initially rendered. Use when you do not need to control its checked state.'
+    },
+    {
+      name: 'checked',
+      required: false,
+      type: 'boolean',
+      default: 'false',
+      description:
+        'The controlled checked state of the checkbox. Must be used in conjunction with `onCheckedChange`.'
+    },
+    {
+      name: 'onCheckedChange',
+      required: false,
+      typeSimple: 'function',
+      type: '(checked: boolean | "indeterminate") => void',
+      description:
+        'Event handler called when the checked state of the checkbox changes.'
+    },
+    {
+      name: 'disabled',
+      required: false,
+      type: 'boolean',
+      default: 'false',
+      description:
+        'When `true`, prevents the user from interacting with the checkbox.'
+    },
+    {
+      name: 'required',
+      required: false,
+      type: 'boolean',
+      default: 'false',
+      description:
+        'When `true`, indicates that the user must check the checkbox before the owning form can be submitted.'
+    }
+
+]}
+/>

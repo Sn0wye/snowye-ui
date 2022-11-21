@@ -58,6 +58,7 @@ export const SIDEBAR: Sidebar = {
     Components: [
       { text: 'Avatar', link: 'en/components/Avatar' },
       { text: 'Button', link: 'en/components/Button' },
+      { text: 'Checkbox', link: 'en/components/Checkbox' },
       { text: 'TextInput', link: 'en/components/TextInput' }
     ]
   }
