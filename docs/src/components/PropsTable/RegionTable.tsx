@@ -4,6 +4,7 @@ import { Box, BoxProps } from '@snowye-ui/react';
 export const RegionTable = ({
   'aria-label': ariaLabel,
   'aria-labelledby': ariaLabelledBy,
+  children,
   ...props
 }: BoxProps) => {
   return (
@@ -25,7 +26,9 @@ export const RegionTable = ({
         }
       }}
     >
-      <Box as='table' {...props} />
+      <Box as='table' {...props}>
+        {children}
+      </Box>
     </Box>
   );
 };
