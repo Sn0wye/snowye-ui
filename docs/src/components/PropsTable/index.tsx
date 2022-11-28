@@ -45,7 +45,7 @@ type Data = {
   required?: boolean;
   default?: string | boolean;
   type: string;
-  typeSimple: string;
+  typeSimple?: string;
   description?: string;
 };
 
