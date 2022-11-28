@@ -5,7 +5,7 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 import ButtonDemo from '../../../demos/ButtonDemo.tsx';
-import HeroContainer from '../../../components/HeroContainer.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
 import { PropsTable } from '../../../components/PropsTable';
 
 A component used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
@@ -26,8 +26,8 @@ import { Button } from '@snowye-ui/react';
 
 ## Example
 
-<HeroContainer client:load>
-  <ButtonDemo client:load />
+<HeroContainer client:idle>
+  <ButtonDemo client:idle />
 </HeroContainer>
 
 ## API Reference
@@ -37,7 +37,7 @@ import { Button } from '@snowye-ui/react';
 Contains all parts of the Button.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'variant',
@@ -85,7 +85,7 @@ Contains all parts of the Button.
 A feedback icon that sits on the left side of the button.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'children',
@@ -100,7 +100,7 @@ A feedback icon that sits on the left side of the button.
 A feedback icon that sits on the right side of the button.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'children',

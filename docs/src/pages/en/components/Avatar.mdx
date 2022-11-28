@@ -6,7 +6,7 @@ next: components/TextInput
 ---
 
 import AvatarDemo from '../../../demos/AvatarDemo.tsx';
-import HeroContainer from '../../../components/HeroContainer.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
 import { PropsTable } from '../../../components/PropsTable';
 
 A circular avatar component with a fallback for showing your user image
@@ -25,8 +25,8 @@ import { Avatar } from '@snowye-ui/react';
 
 ## Example
 
-<HeroContainer client:load>
-  <AvatarDemo client:load />
+<HeroContainer client:idle>
+  <AvatarDemo client:idle />
 </HeroContainer>
 
 ## API Reference
@@ -36,7 +36,7 @@ import { Avatar } from '@snowye-ui/react';
 Contains all parts of the Avatar.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'asChild',
@@ -62,7 +62,7 @@ Contains all parts of the Avatar.
 A feedback icon that sits on the left side of the input field.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'asChild',

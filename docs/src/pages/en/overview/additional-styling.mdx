@@ -6,8 +6,8 @@ prev: overview/getting-started
 ---
 
 import { Button } from '@snowye-ui/react';
-import HeroContainer from '../../../components/HeroContainer';
-import ButtonAdditionalStylingDemo from '../../../demos/ButtonAdditionalStylingDemo';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import ButtonAdditionalStylingDemo from '../../../demos/ButtonAdditionalStylingDemo.tsx';
 
 It is just like: "If you want something done right, do it by yourself".
 
@@ -32,6 +32,6 @@ All components can receive a prop called `css` which receives an object containi
 
 ### Result
 
-<HeroContainer client:load>
-  <ButtonAdditionalStylingDemo client:load />
+<HeroContainer client:idle>
+  <ButtonAdditionalStylingDemo client:idle />
 </HeroContainer>

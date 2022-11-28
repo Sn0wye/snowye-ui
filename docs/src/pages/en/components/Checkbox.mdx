@@ -5,7 +5,7 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 import CheckboxDemo from '../../../demos/CheckboxDemo.tsx';
-import HeroContainer from '../../../components/HeroContainer.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
 import { PropsTable } from '../../../components/PropsTable';
 
 A component used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
@@ -22,8 +22,8 @@ import { Checkbox } from '@snowye-ui/react';
 
 ## Example
 
-<HeroContainer client:load>
-  <CheckboxDemo client:load />
+<HeroContainer client:idle>
+  <CheckboxDemo client:idle />
 </HeroContainer>
 
 ## API Reference
@@ -33,7 +33,7 @@ import { Checkbox } from '@snowye-ui/react';
 Contains all parts of the Checkbox.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'defaultChecked',

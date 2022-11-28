@@ -5,7 +5,7 @@ layout: ../../../layouts/MainLayout.astro
 ---
 
 import TextInputDemo from '../../../demos/TextInputDemo.tsx';
-import HeroContainer from '../../../components/HeroContainer.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
 import { PropsTable } from '../../../components/PropsTable';
 
 A component to get user input inside a text field.
@@ -29,8 +29,8 @@ import { TextInput } from '@snowye-ui/react';
 
 ## Example
 
-<HeroContainer client:load>
-  <TextInputDemo client:load />
+<HeroContainer client:idle>
+  <TextInputDemo client:idle />
 </HeroContainer>
 
 ## API Reference
@@ -40,7 +40,7 @@ import { TextInput } from '@snowye-ui/react';
 Contains all parts of the TextInput.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'children',
@@ -67,7 +67,7 @@ Contains all parts of the TextInput.
 A feedback icon that sits on the left side of the input field.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'children',
@@ -83,7 +83,7 @@ A feedback icon that sits on the left side of the input field.
 A prefix text shown before the input text
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'children',
@@ -99,7 +99,7 @@ A prefix text shown before the input text
 The HTML input itself
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'children',
@@ -115,7 +115,7 @@ The HTML input itself
 A feedback icon/text visibility toggler that sits on the right side of the input field.
 
 <PropsTable
-  client:load
+  client:only='react'
   data={[
     {
       name: 'activeIcon',
