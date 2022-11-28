@@ -1,13 +1,12 @@
 /** @jsxImportSource react */
 import { Box } from '@snowye-ui/react';
-import { FunctionComponent } from 'react';
 
 interface Props {
   css?: any;
   children?: React.ReactNode;
 }
 
-const HeroContainer: FunctionComponent = ({ css, children }: Props) => {
+export const HeroContainer = ({ css, children }: Props) => {
   return (
     <Box
       data-algolia-exclude
@@ -25,15 +24,10 @@ const HeroContainer: FunctionComponent = ({ css, children }: Props) => {
         borderTopRightRadius: '$md',
         border: 0,
         marginTop: '$2',
-        ...(css as any),
-
-        '@bp3': { mx: '-$7' },
-        '@bp4': { mx: '-$8' }
+        ...(css as any)
       }}
     >
       {children}
     </Box>
   );
 };
-
-export default HeroContainer;
