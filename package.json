@@ -7,7 +7,6 @@
   ],
   "scripts": {
     "dev": "turbo dev --parallel",
-    "dev:docs": "turbo dev --filter=docs",
     "dev:storybook": "turbo dev --filter=storybook",
     "build": "turbo build",
     "build:docs": "turbo build --filter=docs",
