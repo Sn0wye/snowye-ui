@@ -2,9 +2,15 @@
 
 ## FIXME
 
-- [ ] Button Composition Pattern (remove)
 - [ ] MultiStep content
 
-## Component Ideas
+## React
+
+- [ ] Refactor Button => remove composition, icons via props.
+- [ ] Verify `as` prop into every component.
+- [ ] Theme Customization
+- [ ] Light Theme
+
+## New components
 
 - [ ] Select Field
