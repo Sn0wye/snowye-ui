@@ -3,6 +3,10 @@
 ## FIXME
 
 - [ ] MultiStep content
+- [ ] Wipe Phosphor react => React Icons
+- [ ] Popover Arrow
+- [ ] Popover DefaultOpen prop
+- [ ] Update storybook ´npx storybook@next upgrade --prerelease´
 
 ## React
 
