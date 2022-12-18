@@ -21,10 +21,21 @@ export default {
   ]
 } as Meta<MultiStepProps>;
 
-export const Default: StoryObj<MultiStepProps> = {};
+export const Default: StoryObj<MultiStepProps> = {
+  args: {
+    label: 'Step 1 of 4'
+  }
+};
 
 export const Full: StoryObj<MultiStepProps> = {
   args: {
-    currentStep: 4
+    currentStep: 4,
+    label: 'Step 4 of 4'
+  }
+};
+
+export const WithoutLabel: StoryObj<MultiStepProps> = {
+  args: {
+    currentStep: 2
   }
 };

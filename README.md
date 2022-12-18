@@ -2,7 +2,6 @@
 
 ## FIXME
 
-- [ ] MultiStep content
 - [ ] Wipe Phosphor react => React Icons
 - [ ] Popover Arrow
 - [ ] Popover DefaultOpen prop

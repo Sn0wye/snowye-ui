@@ -3,14 +3,13 @@ import { Label, MultiStepContainer, Step, Steps } from './styles';
 export interface MultiStepProps {
   size: number;
   currentStep?: number;
+  label?: string;
 }
 
-export const MultiStep = ({ size, currentStep = 1 }: MultiStepProps) => {
+export const MultiStep = ({ size, currentStep = 1, label }: MultiStepProps) => {
   return (
     <MultiStepContainer>
-      <Label>
-        Passo {currentStep} de {size}
-      </Label>
+      {label ? <Label>{label}</Label> : null}
 
       <Steps
         css={{
