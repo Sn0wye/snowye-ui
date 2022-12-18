@@ -1,5 +1,12 @@
 # @snowye-ui/react
 
+## 1.8.0
+
+### Minor Changes
+
+- 6fca00b: - Fix MultiStep content
+  - Fix Popover DefaultOpen
+
 ## 1.7.0
 
 ### Minor Changes
