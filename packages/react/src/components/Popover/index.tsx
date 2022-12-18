@@ -11,8 +11,8 @@ const Trigger = PopoverPrimitive.Trigger;
 
 interface PopoverProps extends ComponentProps<typeof PopoverPrimitive.Root> {}
 
-const PopoverRoot = ({ children, ...props }: PopoverProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+const PopoverRoot = ({ children, defaultOpen, ...props }: PopoverProps) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   return (
     <Root open={isOpen} onOpenChange={setIsOpen} {...props}>
       {children}

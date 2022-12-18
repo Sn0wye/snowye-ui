@@ -1,5 +1,6 @@
 ---
-"@snowye-ui/react": minor
+'@snowye-ui/react': minor
 ---
 
 - Fix MultiStep content
+- Fix Popover DefaultOpen

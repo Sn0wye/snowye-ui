@@ -3,8 +3,6 @@
 ## FIXME
 
 - [ ] Wipe Phosphor react => React Icons
-- [ ] Popover Arrow
-- [ ] Popover DefaultOpen prop
 
 ## React
 
