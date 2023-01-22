@@ -14,3 +14,4 @@
 ## New components
 
 - [ ] Select Field
+- [ ] Password Strength
